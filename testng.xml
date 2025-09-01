@@ -1,8 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="MyTestSuite">
-    <test name="LoginTest">
+    <test name="CreateAdmin">
         <classes>
-            <class name="tests.LoginTest"/>
+            <class name="tests.CreateAdmin"/>
         </classes>
     </test>
 </suite>
