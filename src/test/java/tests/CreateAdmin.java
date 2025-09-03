@@ -15,7 +15,7 @@ public class CreateAdmin extends BaseTest {
 	@Test
     public void createAdminRole() throws InterruptedException {
 		
-        // Login using BaseTest method
+        // Login using BaseTest 
         login("Admin", "admin123");
 
         new WebDriverWait(driver, Duration.ofSeconds(5))
