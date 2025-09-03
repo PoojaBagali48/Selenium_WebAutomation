@@ -5,22 +5,22 @@ import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import locators.CommonLocators;
 
+import pages.LoginPage;
 public class BaseTest {
 	protected WebDriver driver;
-	 @BeforeClass
+	 @BeforeMethod
 	    public void setUp() {
 	        WebDriverManager.chromedriver().setup();
 	        driver = new ChromeDriver();
 	    }
 
-	    @AfterClass
+	    @AfterMethod
 	    public void tearDown() {
 	        if (driver != null) {
 	            driver.quit();
@@ -34,9 +34,9 @@ public class BaseTest {
 	        driver.manage().window().maximize();
 	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 	        
-	        driver.findElement(CommonLocators.USERNAME).sendKeys(username);
-	        driver.findElement(CommonLocators.PASSWORD).sendKeys(password);
-	        driver.findElement(CommonLocators.SUBMIT).click();
+	        driver.findElement(LoginPage.USERNAME).sendKeys(username);
+	        driver.findElement(LoginPage.PASSWORD).sendKeys(password);
+	        driver.findElement(LoginPage.SUBMIT).click();
 
 	        Thread.sleep(3000); 
 	    }
