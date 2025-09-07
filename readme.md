@@ -19,7 +19,7 @@ This project aims to automate the key functionalities of the OrangeHRM Human Res
 ## Features
 
 - **Automated Tests**: Developing using Selenium WebDriver and Java.
-- **Test Reports**: Generate using ExtentReports for detailed insights on test execution.
+- **Test Reports**: Generated using ExtentReports for detailed insights on test execution.
 - **CI/CD Integration**: Compatible with Jenkins for continuous integration and continuous deployment.
 
 ## Prerequisites
@@ -54,7 +54,6 @@ This project aims to automate the key functionalities of the OrangeHRM Human Res
 
 - Integrate with Jenkins CI/CD for automated test runs.
 
-- Add reports with Extend Reports.
 
 
 ## Contact
