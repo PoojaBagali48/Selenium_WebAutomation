@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.CreateAdmin">
+      <class name="tests.MyInfoUpdate">
         <methods>
+          <include name="updateInfo"/>
           <include name="setUp"/>
-          <include name="createAdminRole"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- tests.CreateAdmin -->
+      </class> <!-- tests.MyInfoUpdate -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

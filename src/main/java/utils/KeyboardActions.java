@@ -10,6 +10,15 @@ public class KeyboardActions {
             .sendKeys(Keys.ARROW_DOWN)
             .sendKeys(Keys.ENTER)
             .perform();
+    }  
+        
+        // Using CTRL+A + DELETE
+    public static void clearText(WebElement element) {
+        element.click();  
+        element.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        element.sendKeys(Keys.DELETE);
+        
+        
     }
      
 }
