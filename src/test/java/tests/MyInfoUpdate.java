@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 import base.BaseTest;
 import pages.InfoPage;
 import utils.KeyboardActions;
+import utils.ReportManager;
 
 public class MyInfoUpdate extends BaseTest {
 
@@ -21,6 +22,7 @@ public void updateInfo() throws InterruptedException{
 		
         // Login using BaseTest 
         login("Admin", "admin123");
+        ReportManager.getTest().info("Logged into OrangeHRM");
 	
         //Open MyInfo Page
        driver.findElement(InfoPage.InfoTab).click();
@@ -86,9 +88,8 @@ public void updateInfo() throws InterruptedException{
        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center', inline: 'nearest'});", saveButton);
        saveButton.click();
        Thread.sleep(10000);
-       System.out.println("Displayed: " + saveButton.isDisplayed());
-       System.out.println("Enabled: " + saveButton.isEnabled());
-   
+       
+       ReportManager.getTest().pass("Info updated successfully");
        
 }
 }
